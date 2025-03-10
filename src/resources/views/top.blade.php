@@ -14,18 +14,20 @@
     <div class="main-visual">
         <img src="{{ asset('images/mainvisual.jpg') }}" alt="メインビジュアル">
     </div>
-    <header>
-        <h1><img src="{{ asset('images/logo.svg') }}" alt="Wooden Jewelry"></h1>
+    <header class="header-wrapper">
+        <h1 class="header__logo">
+            <img src="{{ asset('images/logo.svg') }}" alt="Wooden Jewelry">
+        </h1>
         <nav>
-            <ol>
-                <li>Concept</li>
-                <li>Work</li>
-                <li>Contact</li>
-            </ol>
+            <ul>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="mailto:example@example.com?subject=お問い合わせ">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section class="concept">
+        <section class="concept" id="concept">
             <div class="concept__image">
                 <img src="{{ asset('images/concept.jpg') }}" alt="イメージ画像">
             </div>
@@ -36,7 +38,7 @@
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
         </section>
-        <section class="work">
+        <section class="work" id="work">
             <div class="work__text">
                 <h2>ハンドメイドにこだわる理由</h2>
                 <h3>Work</h3>

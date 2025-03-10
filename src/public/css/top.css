@@ -8,17 +8,21 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    color: #383e45;
+    color: #2d2d2d;
     font-size: 0.9rem;
-    padding: 0 10px;
+    font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+    padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
+    color: #2d2d2d;
 }
 
 img {
@@ -29,6 +33,166 @@ li {
     list-style: none;
 }
 
+
+/* main-visual */
+
+.main-visual {
+    width: 90vw;
+    margin: 50px auto 32px;
+    text-align: center;
+    font-size: 0;
+}
+
+
+/* header */
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    margin-bottom: 62px;
+    max-width: 1000px;
+}
+
+.header__logo{
+    all: unset;
+    margin: 0 50px 0 0;
+}
+
+.header__logo img{
+    max-width: 110px;
+}
+
+header nav{
+    display: flex;
+}
+
+header ul{
+    display: flex;
+}
+
+header li{
+    margin-right: 30px;
+}
+
+header li:last-child{
+    margin-right: 0;
+}
+
+header li:hover{
+    opacity: 0.6;
+}
+
+
+/* main */
+
+main{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.concept{
+    margin-bottom: 60px;
+}
+
+.concept, .work{
+    display: flex;
+    justify-content: center;
+}
+
+.concept__image, .work__image{
+    flex: 1;
+    max-width: 50%;
+}
+
+.concept__text, .work__text{
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+    height: auto;
+    padding: 0 60px;
+}
+
+.concept__text h2, .work__text h2{
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.concept__text h3, .concept__text p, .work__text h3, .work__text p{
+    font-size: 1rem;
+}
+
+.concept__text h3, .work__text h3{
+    margin-bottom: 25px;
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin:80px auto 20px;
+    max-width: 1000px;
+}
+
+.footer__logo{
+    max-width: 110px;
+}
+
+.footer__coopyright{
+    font-size: 0.875rem;
+}
+
+
 /* レスポンシブ */
 
-/* @media (max-width: 1024px) {} */
+@media (max-width: 767px) {
+    .main-visual {
+        width: 100%;
+        max-width: 767px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header-wrapper{
+        max-width: 767px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    .concept{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .work{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .concept__image, .work__image{
+        max-width: 100%;
+    }
+
+    .concept__text, .work__text {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main{
+        padding: 0 16px;
+    }
+
+    footer{
+        padding: 0 16px;
+    }
+}
